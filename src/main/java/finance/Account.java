@@ -1,6 +1,6 @@
 package finance;
 
-public abstract class Account {
+public abstract class Account implements Valuable{
     private String name;
     private String accountNumber;
     private double balance;

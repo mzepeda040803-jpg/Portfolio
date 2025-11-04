@@ -1,7 +1,7 @@
 package finance;
 
-public class CheckingAccount extends Account {
-    public CheckingAccount(String name, String accountNumber, double balance) {
+public class CreditCard extends Account{
+    public CreditCard(String name, String accountNumber, double balance) {
         super(name, accountNumber, balance);
     }
 
@@ -10,16 +10,15 @@ public class CheckingAccount extends Account {
         return getBalance();
     }
 
-    public double deposit(double amount) {
+    public double charge(double amount) {
         double newBalance = getBalance() + amount;
         setBalance(newBalance);
         return newBalance;
     }
 
-    public double withdraw(double amount) {
+    public double pay(double amount) {
         double newBalance = getBalance() - amount;
         setBalance(newBalance);
         return newBalance;
     }
-
 }
